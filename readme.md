@@ -16,6 +16,16 @@
 ```
 ![git log --oneline ](image/readme/1776630912952.png)
 ---
+
+---
+- **git log --oneline -n5**: Xem 5 commit gần nhất
+- 👉 Dễ đọc, gọn nhẹ
+```
+    git log --oneline 
+```
+![git log --oneline -n5](image/readme/1776632319493.png)
+---
+
 - **git log --oneline --graph**: Hiển thị dạng cây (branch)
 - 👉 Giúp thấy rõ nhánh, merge, HEAD
 ```
@@ -84,4 +94,39 @@
 **git diff**→ xem thay đổi chưa add
 **git diff --staged** → xem thay đổi đã add
 **git diff commit1 commit2** → so sánh 2 commit
+**git pull**: Lấy lịch sử từ remote
+- 👉 Dùng khi:
+    + có commit mới trên remote
+    + muốn cập nhật local
+```
+    git pull
+```
+![git pull](image/readme/1776632237612.png)
+---
+**git fetch**: git fetch dùng để lấy (download) các thay đổi mới từ remote (ví dụ GitHub) về máy nhưng KHÔNG tự động merge vào code hiện tại.
+- 👉 Nói đơn giản: fetch = cập nhật thông tin mới, nhưng chưa đụng vào code bạn đang làm
+```
+    git fetch
+```
+---
+**git reflog**: lịch sử hành động trong repo (kể cả những commit đã bị mất)
+```
+    git reflog
+```
+![git reflog](image/readme/1776632400741.png)
+--- 
+**git reflog --no-abbrev**: `Mặc định Git hiển thị commit ID dạng rút gọn (ví dụ: a1b2c3d)`
+- 👉 no-abbrev → `hiển thị full commit hash (đầy đủ 40 ký tự)`
+```
+    git reflog --no-abbrev
+```
+
+![git reflog --no-abbrev](image/readme/1776632495680.png)
+-   🧠 Khi nào dùng?
+    -   Khi cần copy chính xác commit hash đầy đủ
+    -   Khi làm việc với:
+        - git reset
+        - git checkout
+        - recovery (khôi phục commit bị mất)
+
 ---
